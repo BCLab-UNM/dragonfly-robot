@@ -1,0 +1,130 @@
+= 3D Printed Parts
+
+3D prints:
+image::resources/3DPrintedParts/CuraExport.png[Cura Export]
+All prints are version controlled in onshape.
+To generate STL files for Cura, onshape export to STL files using the following settings.  Note the Millimeter Units:
+
+
+Slice STL files with cura and print on lulzbot (lulzbot specific version of cura: https://www.lulzbot.com/cura)
+
+=== Part prints:
+|===
+|Part|Quantity|Picture|Notes
+
+|Arms
+|
+|
+|
+
+|Motor Mount
+|4
+|
+|Just the mount portion needs to be printed, not the bottom surround.
+
+|ESC Mount
+|4
+|
+|
+
+|Body
+|
+|
+|
+
+|Arm / Leg lock
+|6
+|
+|
+
+|Battery Tray
+|
+|
+|
+
+|Hanger side mount
+|4
+|
+|Mirror 2 in Cura
+
+|Hanger side bottom Left
+|1
+|
+|
+
+|Hanger side bottom Right
+|1
+|
+|
+
+|Axil
+|4
+|
+|
+
+|Hanger brace and bracket
+|2
+|
+|
+
+|Crossbeam
+|2
+|
+|
+
+|Flight Controller Mount
+|
+|
+|
+
+|Bottom mount
+|1
+|
+|
+
+|Flight controller mount
+|1
+|
+|
+
+|GPS Mount
+|
+|
+|
+
+|Bottom
+|1
+|
+|
+
+|Screw-down
+|1
+|
+|
+
+|Arm bottom
+|1
+|
+|Arm bottom should be cut down to allow for GPS cable to each and be able to be folded
+
+|Arm top
+|1
+|
+|
+
+|Mast stiffener
+|1
+|
+|
+
+|Other
+|
+|
+|
+
+|Lidar mount
+|1
+|
+|
+
+|===
