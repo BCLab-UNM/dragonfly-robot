@@ -1,10 +1,11 @@
 = 3D Printed Parts
 
 3D prints:
-image::resources/3DPrintedParts/CuraExport.png[Cura Export]
+
 All prints are version controlled in onshape.
 To generate STL files for Cura, onshape export to STL files using the following settings.  Note the Millimeter Units:
 
+image::resources/3DPrintedParts/CuraExport.png[Cura Export]
 
 Slice STL files with cura and print on lulzbot (lulzbot specific version of cura: https://www.lulzbot.com/cura)
 
