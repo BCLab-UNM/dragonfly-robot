@@ -1,0 +1,170 @@
+= PhysicalBuild
+:toc:
+
+== Arms
+
+Solder motors to ESCs
+• 2 motors straight wired, 2 motors with 2 wires swapped.  This supports the motor orientation to hard-wire their rotation.  Make sure to add heat shrink around each solder joint.
+
+Extend power wires from ESCs
+• Add heat shrink around each solder joint
+
+
+Attach Motor to motor mounts
+• Make sure to attach metal brackets prior to attaching motors
+• Loctite motor bolts and arm bracket bolds
+
+
+Cut arm to 18 inches:
+
+Attach arms to hinges
+Hinges need to be removed from the original tarot arms (by force - one ughaduga should do). The hinges are attached to the tarot arms by a bolt and glue.  Start by removing the bolt and then separating the hinge from the arm using a small wedge and a hammer:
+
+
+Drill a hole to attach the hinge to arm.  This hole should align with the hinge mounting holes -  to align in, you can put the hinge in place and mark a drill point.
+
+
+And attach the hinge to arm using the long bolt
+
+
+Attach mounted motors to end of arms
+
+
+Hot glue ESCs to ESC mounts and glue to bottom of arm, zip tie to arm
+
+
+Zip tie all lines into place
+
+Result
+4x of these, 2 with swapped ESC / Motor wires:
+
+
+
+== Body
+
+Mount Legs
+Unscrew leg brackets and attach them to the body
+
+
+Reattach legs to brackets and connect set screw
+
+
+Mount Arms
+Replace stock tarot frame arm locks with larger 3D printed arm locks.
+
+
+Attach built arms to attachment points in the body frame.
+
+
+Keep in mind motor orientation.  Motors A and C (1 and 2) should be using crossed ESC to motor wiring orientation, motors B and D should be straight. (See Quad motor letter example figure for arm labels).
+
+
+
+
+Solder Hall Effect sensor (Mauch voltage sensor) to XT90 plug
+Verify hall effect sensor orientation.  Arrow should be pointing away from the battery in, towards the quad
+
+
+Wire power to main power
+Route wires into permanent locations and make sure you have enough slack
+
+
+5 power and 5 ground into 1 power 1 ground -> PL-Sensor -> Anti-spark connectors.  Add heavyduty heat shrink around joints and stow wires
+
+Result:
+
+==  Battery Tray
+Add Battery Tray
+Attach tray hangers to body (metal payload brackets go inside of 3D printed parts):
+<need image>
+
+Add payload rails.  The long bracket end should face towards the back of the quad (weight offsets the payload)
+<need image>
+
+Attach left and right battery brackets using axils and crossbeams to stabilize separation between tray hangers.  Use a battery to ensure that the mounting separation is correct.  The battery should be fixed (not tight or loose) within the battery hangers and brackets.
+
+
+Add glue to axils and crossbeams
+
+<need image of adding glue to axils>
+
+Mount top plate to body
+Top plate should face forward with mourning fins on the left and right side of the quad.  The forward orientation of the plate has a notch for GPS mast clearance.
+
+Make sure Mauch has enough slack
+
+
+Widen holes in body to accept bolt
+
+
+
+Screw top plate to body with rubber dampeners sandwich between top plate and body
+
+Mount pixhawk
+Tape Pixhawk down to secondary top plate in corners
+
+
+Glue secondary top plate to top plate with vibration gel
+<need image>
+
+== Assemble Raspberry pi
+
+
+Solder in mounting leads
+
+
+Wire indicator LED to hat (LED should have note facing forward)
+
+Solder power jumpers
+
+Attach to Raspperry PI using plastic standoffs
+
+
+
+Ziptie down Raspberry pi
+Use large ziptie as “belt”, second small ziptie in corner
+
+
+Ziptie down mauch power supply
+Small zip ties in 4 corners
+
+
+Wire mauch to pixhawk power 1 and power 2
+
+
+Mount power button and wire to Mauch
+
+
+Wire hall effect sensor (voltage sensor) to Mauch
+<need image>
+
+
+Run ESC control lines to pixhawk
+The motor orientation shoudl already be set, but wiring the control lines tot he pixhawk must be done in the specified order: [A,C,D,B] -> [1,2,3,4]
+
+https://ardupilot.org/copter/docs/connect-escs-and-motors.html#checking-the-motor-numbering-with-the-mission-planner-motor-test
+
+Wire telemetry and radio control to pixhawk, velcro to the bottom
+<need image>
+
+== GPS
+Assemble GPS stand and mount to front corner of frame
+Glue together GPS stand structure.  Verify length will fold down accommodating GPS wire length.
+<need image for GPS wire length>
+
+Attach stand structure to the bottom bracket (add tightener before screwing together):
+
+Mount bottom bracket to the frame.  Keep in mind the orientation of the bolt and angle of the GPS arm.  The arm should tilt in towards the center but face forward and the bolt should face outward for accessibility.  Be sure to add Loctite
+
+
+Mount GPS device
+
+Wire to Pixhawk GPS, lidar, etc
+
+Wire to raspberry pi pixhawk uart, sba5 usb
+
+Wire in LiDAR
+
+https://docs.px4.io/v1.9.0/en/sensor/lidar_lite.html
+
+https://ardupilot.org/copter/docSebas/common-pixhawk-overview.html#i2c
