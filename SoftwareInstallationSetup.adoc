@@ -1,8 +1,42 @@
+## Download and install the Raspberry Pi Imager
+https://www.raspberrypi.com/software/ 
+
+Ubuntu: https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb 
+
+Windows: https://downloads.raspberrypi.org/imager/imager_latest.exe 
+
+### Run the Raspberry Pi Imager
+Then click "CHOOSE OS" under Operating System then "use custom" then select the `ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz`
+Then click "CHOOSE STORAGE" under Storage and then "Internal SD card reader"
+Click "WRITE" enter your password if it promts you. 
+
+Profit
+
+After writing is compleate then mount the SD card(if not alredy)
+## Edit `/etc/netplan/50-cloud-init.yaml` 
+add below to the file
+```yaml
+wifis:
+  wlan0:
+      optional: false
+      access-points:
+          "dragonflyadhoc":
+              password: "s:dragonfly"
+      dhcp4: true
+```
+
+### @NOTE where it is `#` please put the appropriate number
+## Edit `/etc/hostname`
+edit to just
+`dragonfly#`
+
+## Edit `/etc/hosts`
+just below localhost paste
+`127.0.1.1 dragonfly#`
 
 
-https://cdimage.ubuntu.com/releases/20.04.4/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz
 
-Install Mission Planner on Windows
+## Install Mission Planner on Windows
 https://ardupilot.org/planner/docs/mission-planner-installation.html
 
 Connect Pixhawk to computer via USB cable
