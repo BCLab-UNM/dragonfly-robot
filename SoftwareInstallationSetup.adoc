@@ -1,0 +1,17 @@
+
+
+https://cdimage.ubuntu.com/releases/20.04.4/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz
+
+Install Mission Planner on Windows
+https://ardupilot.org/planner/docs/mission-planner-installation.html
+
+Connect Pixhawk to computer via USB cable
+
+Flash Arducopter firmware and restart
+
+Copy initial parameters from another Dragonfly and restart
+
+
+Verify battery voltage.  If the battery voltage is too low (11V?) then you may need to recopy in the initial parameters.
+
+Without propellers installed, perform a motor test.  Verify correct motor orientation and spin (reference above figure)
