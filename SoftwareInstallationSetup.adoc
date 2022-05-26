@@ -18,12 +18,40 @@ add below to the file
 ```yaml
 wifis:
   wlan0:
-      optional: false
+      optional: true
       access-points:
           "dragonflyadhoc":
               password: "s:dragonfly"
       dhcp4: true
 ```
+So it should ook something like this
+```yaml
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: true
+            optional: true
+    version: 2
+    wifis:
+     wlan0:
+      dhcp4: true
+      optional: true
+      access-points:
+       "dragonflyadhoc":
+        password: "s:dragonfly"
+```
+Then apply it and reboot
+```bash
+sudo netplan apply 
+sudo reboot
+```
+Once the system is back up verify it has network connectivity 
+`ping 8.8.8.8`
 
 ### @NOTE where it is `#` please put the appropriate number
 ## Edit `/etc/hostname`
