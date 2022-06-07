@@ -2,7 +2,7 @@
 
 == Everything you need to build a Dragonfly Robot. 
 
-https://github.com/BCLab-UNM/dragonfly-robot/blob/main/3DPrintedParts.adocc[3D Printed Parts]
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/3DPrintedParts.adoc[3D Printed Parts]
 
 https://github.com/BCLab-UNM/dragonfly-robot/blob/main/PurchasedPartsList.csv[Purchased Parts List]
 
