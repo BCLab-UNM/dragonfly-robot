@@ -18,10 +18,11 @@ Slice STL files with cura and print on lulzbot (lulzbot specific version of cura
 |
 |
 
-|Motor Mount
+
+|Arm Fulcrum
 |4
-a|image::resources/3DPrintedParts/MotorMount.png[]
-|Just the mount portion needs to be printed, not the bottom surround.
+a|image::resources/3DPrintedParts/ArmFulcrum.png[]
+|
 
 |ESC Mount
 |4
