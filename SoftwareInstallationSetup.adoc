@@ -76,8 +76,32 @@ just below localhost paste
 `127.0.1.1 dragonfly#`
 
 
+if you miss the cloud init printout with the ip address you can install ifconfig
+`sudo apt install net-tools`
+Then run `ifconfig` and look at the inet under eth0, wlan0 and/or wlan1
 
-## Install Mission Planner on Windows
+# On the laptop/desktop
+
+## Install ansible
+
+## edit the  `/etc/ansible/hosts` file at the bottom add
+```
+[dragonflys]
+ip_of_dragonfly1
+ip_of_dragonfly2
+ip_of_dragonfly3
+ip_of_dragonfly4
+ect
+```
+
+## Copy over your public ssh key
+from the laptops `.ssh/id_rsa.pub`
+insert into `.ssh/authorized_keys`
+
+## Run the playbook from the dragonfly-controller/scripts directory
+`ansible-playbook playbook.yaml -u ubuntu`
+
+# Install Mission Planner on Windows
 https://ardupilot.org/planner/docs/mission-planner-installation.html
 
 Connect Pixhawk to computer via USB cable
