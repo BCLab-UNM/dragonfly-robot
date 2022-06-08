@@ -12,17 +12,24 @@ Click "WRITE" enter your password if it promts you.
 
 Profit
 
-After writing is compleate then mount the SD card(if not alredy)
+After writing is compleate then mount the SD card(if not alredy) 
+
 ## Edit `/etc/netplan/50-cloud-init.yaml` 
 add below to the file
 ```yaml
-wifis:
-  wlan0:
-      optional: true
-      access-points:
+ wifis:
+      wlan0:
+       optional: true
+       access-points:
           "dragonflyadhoc":
-              password: "s:dragonfly"
-      dhcp4: true
+             password: "s:dragonfly"
+       dhcp4: true
+      wlan1:
+       optional: true
+       access-points:
+          "dragonflyadhoc":
+             password: "s:dragonfly"
+       dhcp4: true
 ```
 So it should ook something like this
 ```yaml
@@ -38,12 +45,18 @@ network:
             optional: true
     version: 2
     wifis:
-     wlan0:
-      dhcp4: true
-      optional: true
-      access-points:
-       "dragonflyadhoc":
-        password: "s:dragonfly"
+      wlan0:
+       optional: true
+       access-points:
+          "dragonflyadhoc":
+             password: "s:dragonfly"
+       dhcp4: true
+      wlan1:
+       optional: true
+       access-points:
+          "dragonflyadhoc":
+             password: "s:dragonfly"
+       dhcp4: true
 ```
 Then apply it and reboot
 ```bash
