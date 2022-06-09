@@ -97,6 +97,7 @@ ect
 ## Copy over your public ssh key
 from the laptops `.ssh/id_rsa.pub`
 insert into `.ssh/authorized_keys`
+or just run `ssh-copy-id ubuntu@dragonfly's_ip`
 
 ## Run the playbook from the dragonfly-controller/scripts directory
 `ansible-playbook playbook.yaml -u ubuntu`
