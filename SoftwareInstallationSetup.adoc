@@ -115,3 +115,32 @@ Copy initial parameters from another Dragonfly and restart
 Verify battery voltage.  If the battery voltage is too low (11V?) then you may need to recopy in the initial parameters.
 
 Without propellers installed, perform a motor test.  Verify correct motor orientation and spin (reference above figure)
+
+
+# Transmitters
+## Download the companion applicaiton
+https://www.open-tx.org/downloads click the most recent at the top then scroll to the bottom and under `Download links:` click the appropriate installer for your system. 
+
+## Download the SD card image
+https://downloads.open-tx.org/2.3/release/sdcard/opentx-t16/
+
+## Verify a usb connection with the transmitter
+Plug in the transmitter's micro usb if you are running linux run `lsusb | grep "DFU Mode"` to verify it has come up properly if not disassemble and inspect/reseat the ribbon cable
+If all is good you should see this `Bus 001 Device 036: ID 0483:df11 STMicroelectronics STM Device in DFU Mode`
+
+## Install the downloaded opentx companion applicaiton 
+add the radio profile 
+Radio type: Jumper T16
+We have a mixure of radios so if the antenna is on the upper front then select `internalmulti` if there is the module installed below don't have it selected.
+You can select `noheli` as we are running quads nto helicopters.
+
+On the leftside make sure to download a copy of the original firmware and save it.
+Make sure to click `show details` and read as you will get a `Flashing done` message even when it fails
+
+Then `Write Firmware to radio` again make sure that the `show details` checkbox is checked and read the output to make sure the flashing compleated
+
+Unplug the trasmiter and remove the sd card, make a copy of its contents, wipe it clean and then write to it the extracted files from what you downloaded in part `Download the SD card image`
+
+Reinstall the SD card and power up the transmitter and calibrate the anologs 
+
+## Rebind the trasmitter to the dragonflys
