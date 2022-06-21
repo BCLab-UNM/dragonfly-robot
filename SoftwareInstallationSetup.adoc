@@ -56,6 +56,12 @@ or just run `ssh-copy-id ubuntu@dragonfly's_ip`
 ## Run the playbook from the dragonfly-controller/scripts directory
 `ansible-playbook playbook.yaml -u ubuntu`
 
+@Note if you are getting this error below it is probably because unattended upgrades are in progress, so just wait a few minutes and run it again.
+```
+fatal: [64.106.39.115]: FAILED! => {"changed": false, "msg": "'/usr/bin/apt-get upgrade --with-new-pkgs ' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 2551 (unattended-upgr)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stdout": "", "stdout_lines": []}
+
+```
+
 
 ## Edit `/etc/netplan/20-adhoc.yaml` 
 on the addresses line change the 1 to match the Dragonfly's number
