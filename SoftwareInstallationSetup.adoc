@@ -12,57 +12,8 @@ Click "WRITE" enter your password if it promts you.
 
 Profit
 
-After writing is compleate then mount the SD card(if not alredy) 
+After writing is compleate, boot the pi up and change the password(will prompt you to do it on login),
 
-## Edit `/etc/netplan/50-cloud-init.yaml` 
-add below to the file
-```yaml
- wifis:
-      wlan0:
-       optional: true
-       access-points:
-          "dragonflyadhoc":
-             password: "s:dragonfly"
-       dhcp4: true
-      wlan1:
-       optional: true
-       access-points:
-          "dragonflyadhoc":
-             password: "s:dragonfly"
-       dhcp4: true
-```
-So it should ook something like this
-```yaml
-# This file is generated from information provided by the datasource.  Changes
-# to it will not persist across an instance reboot.  To disable cloud-init's
-# network configuration capabilities, write a file
-# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
-# network: {config: disabled}
-network:
-    ethernets:
-        eth0:
-            dhcp4: true
-            optional: true
-    version: 2
-    wifis:
-      wlan0:
-       optional: true
-       access-points:
-          "dragonflyadhoc":
-             password: "s:dragonfly"
-       dhcp4: true
-      wlan1:
-       optional: true
-       access-points:
-          "dragonflyadhoc":
-             password: "s:dragonfly"
-       dhcp4: true
-```
-Then apply it and reboot
-```bash
-sudo netplan apply 
-sudo reboot
-```
 Once the system is back up verify it has network connectivity 
 `ping 8.8.8.8`
 
@@ -79,6 +30,7 @@ just below localhost paste
 if you miss the cloud init printout with the ip address you can install ifconfig
 `sudo apt install net-tools`
 Then run `ifconfig` and look at the inet under eth0, wlan0 and/or wlan1
+@note you can also logout and back-in and it is part of the banner
 
 # On the laptop/desktop
 
@@ -99,8 +51,23 @@ from the laptops `.ssh/id_rsa.pub`
 insert into `.ssh/authorized_keys`
 or just run `ssh-copy-id ubuntu@dragonfly's_ip`
 
+@Note `dragonfly#.local` might resolve
+
 ## Run the playbook from the dragonfly-controller/scripts directory
 `ansible-playbook playbook.yaml -u ubuntu`
+
+
+## Edit `/etc/netplan/20-adhoc.yaml` 
+on the addresses line change the 1 to match the Dragonfly's number
+```yaml
+addresses: [10.42.0.1/24]
+```
+Then apply it and reboot
+```bash
+sudo netplan apply 
+sudo reboot
+```
+
 
 # Install Mission Planner on Windows
 https://ardupilot.org/planner/docs/mission-planner-installation.html
