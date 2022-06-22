@@ -116,4 +116,40 @@ Unplug the trasmiter and remove the sd card, make a copy of its contents, wipe i
 
 Reinstall the SD card and power up the transmitter and calibrate the anologs 
 
+### External antenna module
+In the case of TX1 it does not have an internal module and the external module was running an old bootloader that did not support upgrading the firmware from the transmitter.
+So Plug directly into the external module's USB micro at the bottom the the transmitter and plug into a linux system
+Run `lsusb` you should see something like `Bus 001 Device 045: ID 10c4:ea60 Silicon Labs CP210x UART Bridge`
+
+Download the module's new firmware
+https://github.com/pascallanger/DIY-Multiprotocol-TX-Module/releases/download/v1.3.3.7/mm-stm-serial-reta-v1.3.3.7.bin
+For a current list go to 
+https://downloads.multi-module.org/
+
+#### Install Flash multi
+Fallow the instructions on
+https://github.com/benlye/flash-multi/blob/master/doc/Linux.md
+
+You'll end up running something like 
+```bash
+wget https://github.com/benlye/flash-multi/releases/download/0.6.1/flash-multi-0.6.0.tar.gz
+tar -xvzf flash-multi-0.6.0.tar.gz
+cd flash-multi-0.6.0
+sudo ./tools/install.sh
+sudo cp -v ./tools/45-maple.rules /etc/udev/rules.d/45-maple.rules
+sudo chown root:root /etc/udev/rules.d/45-maple.rules
+sudo chmod 644 /etc/udev/rules.d/45-maple.rules
+sudo udevadm control --reload-rules
+sudo usermod -a -G plugdev $USER\nsudo usermod -a -G dialout $USER
+```
+`./flash-multi -f /home/carter/Downloads/mm-stm-serial-reta-v1.3.3.7.bin -p /dev/ttyUSB0`
+
+Once you are running a more modern bootloader on the external module you can update the using the transmiter
+Just copy the bin file to the onboard SD card and fallow this
+https://www.multi-module.org/using-the-module/firmware-updates/update-methods#opentx
+
 ## Rebind the trasmitter to the dragonflys
+Hit the "MDL" button, then roll the right roller to the right until you get to Internal(or External) RF got to mode change to `MULTI`, the next option change to `FrSky X` then the next selection to `D16 8ch` press the wheel for enter/continue
+Then change the recever number to match the dragonfly's # and then select bind, the transmitter should beep. While you are doing this power up the dragonfly and while doing so have the small button the on the X8R depressed.
+then power cycle both the dragonfly and the trasmiter you should have a solid green light on the X8R receiver if not try again
+
