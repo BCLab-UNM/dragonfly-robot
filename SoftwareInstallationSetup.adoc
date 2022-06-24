@@ -97,6 +97,16 @@ Verify battery voltage.  If the battery voltage is too low (11V?) then you may n
 
 Without propellers installed, perform a motor test.  Verify correct motor orientation and spin (reference above figure)
 
+= Install Mission Planner on Linux (Currently broken)
+Make sure exicute from inside a sub directory
+[source,bash]
+----
+sudo apt install mono-runtime libmono-system-windows-forms4.0-cil libmono-system-core4.0-cil libmono-system-management4.0-cil libmono-system-xml-linq4.0-cil
+sudo apt install mono-complete
+wget https://firmware.ardupilot.org/Tools/MissionPlanner/MissionPlanner-latest.zip
+unzip MissionPlanner-latest.zip
+mono MissionPlanner.exe
+----
 
 = Transmitters
 ## Download the companion applicaiton
