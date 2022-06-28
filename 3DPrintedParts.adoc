@@ -18,13 +18,20 @@ Slice STL files with cura and print on lulzbot (lulzbot specific version of cura
 |
 |
 
-
 |Arm Fulcrum
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Arm%20Fulcrum.stl[STL]
 |4
 a|image::resources/3DPrintedParts/ArmFulcrum.png[]
 |
 
+|Arm Lock Lock
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Arm%20Lock%20Lock.stl[STL]
+|4
+|
+|
+
 |ESC Mount
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Motor%20Mount%20Top.stl[STL]
 |4
 a|image::resources/3DPrintedParts/ESCMount.png[]
 |
@@ -34,7 +41,12 @@ a|image::resources/3DPrintedParts/ESCMount.png[]
 |
 |
 
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/BH%20Clamp.stl[STL]
+
+
+
 |Arm / Leg lock
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Leg%20lock.stl[STL]
 |6
 a|image::resources/3DPrintedParts/ArmLegLock.png[]
 |
@@ -45,21 +57,26 @@ a|image::resources/3DPrintedParts/ArmLegLock.png[]
 |
 
 |Hanger side mount
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Hanger%20Battery%20Plate.stl[STL]
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Hanger%20Side%20Top.stl[STL]
 |4
 a|image::resources/3DPrintedParts/BatteryHangerSideMount.png[]
 |Mirror 2 in Cura
 
 |Hanger side bottom Left
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Hanger%20Side%20Bottom%20-%20Part%201.stl[STL]
 |1
 a|image::resources/3DPrintedParts/BatteryHangerSideBottomLeft.png[]
 |
 
 |Hanger side bottom Right
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Hanger%20Side%20Bottom%20-%20Part%202.stl[STL]
 |1
 a|image::resources/3DPrintedParts/BatteryHangerSideBottomRight.png[]
 |
 
 |Axil
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Axil.stl[STL]
 |4
 a|image::resources/3DPrintedParts/BatteryAxil.png[]
 |
@@ -70,16 +87,19 @@ a|image::resources/3DPrintedParts/BatteryHangerBraceAndBracket.png[]
 |
 
 |Crossbeam
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Cross%20Beam.stl[STL]
 |2
 a|image::resources/3DPrintedParts/BatteryCrossbeam.png[]
 |
 
 |Flight Controller Mount
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Flight%20Controller%20-%20Top.stl[STL]
 |
 a|image::resources/3DPrintedParts/FlightControllerMount.png[]
 |
 
 |Flight controller Bottom mount
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/Flight%20Controller%20-%20Bottom.stl[STL]
 |1
 a|image::resources/3DPrintedParts/FlightControllerMountBottom.png[]
 |
@@ -120,6 +140,7 @@ a|image::resources/3DPrintedParts/GPSMountMastStiffener.png[]
 |
 
 |Lidar mount
+https://github.com/BCLab-UNM/dragonfly-robot/blob/main/resources/3DPrintedParts/stl/LIDAR%20Lite%20v4%20HP%20Holder.stl[STL]
 |1
 a|image::resources/3DPrintedParts/LidarMount.png[]
 |
