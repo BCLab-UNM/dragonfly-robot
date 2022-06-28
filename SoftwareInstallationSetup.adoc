@@ -173,3 +173,5 @@ Hit the "MDL" button, then roll the right roller to the right until you get to I
 Then change the receiver number to match the dragonfly's # and then select bind, the transmitter should beep. While you are doing this power up the dragonfly and while doing so have the small button the on the X8R depressed.
 then power cycle both the dragonfly and the transmitter you should have a solid green light on the X8R receiver if not try again
 
+== Disable inactivity alarm 
+Sys press the page button until you are on the Radio setup tab then scroll down to alarms and set inactivity to `0m`
