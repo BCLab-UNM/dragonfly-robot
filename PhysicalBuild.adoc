@@ -78,6 +78,15 @@ Result
 
 == Body
 
+=== Legs
+Cut the thicker carbon fiber tube to match the length of the provided ones in the kit.
+Make sure the setscrews are installed if not look for them in a small plastic bag.
+Install the tube and tighten till the tubes won't move/pullout.
+
+image::resources/PhysicalBuild/Legs/legSetScrew.jpg[]
+image::resources/PhysicalBuild/Legs/legSetScrew2.jpg[]
+image::resources/PhysicalBuild/Legs/legSetScrewLower.jpg[]
+
 Mount Legs
 Unscrew leg brackets and attach them to the body
 
