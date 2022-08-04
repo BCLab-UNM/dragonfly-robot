@@ -1,6 +1,26 @@
 = PhysicalBuild
 :toc:
 
+== Tiger Motor Flame 60A ESC programing cable removal mod
+Using a 1.5mm hex tool unscrew the 4 bolts
+
+image::resources/PhysicalBuild/ESC/ESCUnScrew.jpg[]
+image::resources/PhysicalBuild/ESC/ESCUnScrewed.jpg[]
+
+The housing should pull apart smoothly, and then carefully pick off the indicated epoxy.
+
+image::resources/PhysicalBuild/ESC/ESCCoverRemoved.jpg[]
+image::resources/PhysicalBuild/ESC/ESCGoopRemoved.jpg[]
+Use a soldering iron to reflow and remove the indicated wires, then cover the pads with hotglue.
+
+image::resources/PhysicalBuild/ESC/ESCWiresRemoved.jpg[]
+While the hotglue is still got place the back cover back on firmly and hold for a few seconds to cool.
+
+image::resources/PhysicalBuild/ESC/ESCBackPlate.jpg[]
+Flip back over and reinstall the bolts.
+
+image::resources/PhysicalBuild/ESC/ESCScrewsLoose.jpg[]
+
 == Arms
 
 Solder motors to ESCs
