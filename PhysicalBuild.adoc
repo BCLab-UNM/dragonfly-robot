@@ -37,7 +37,15 @@ Attach Motor to motor mounts
 • Make sure to attach metal brackets prior to attaching motors
 • Loctite motor bolts and arm bracket bolds
 
-image::resources/PhysicalBuild/motormount1.png[]
+Slide the plastic onto the bolt
+
+image::resources/PhysicalBuild/Arms/BoltPlastic.jpg[]
+image::resources/PhysicalBuild/Arms/MotorMount.jpg[]
+image::resources/PhysicalBuild/Arms/MotorMountUpsidedown.jpg[]
+image::resources/PhysicalBuild/Arms/4xMotorMounts.jpg[]
+
+`@TODO update image`
+
 image::resources/PhysicalBuild/motormount2.png[]
 
 Cut arm to 18 inches:
