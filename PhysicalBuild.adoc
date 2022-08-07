@@ -24,18 +24,21 @@ image::resources/PhysicalBuild/ESC/ESCScrewsLoose.jpg[]
 == Arms
 
 Solder motors to ESCs
-• 2 motors straight wired, 2 motors with 2 wires swapped.  This supports the motor orientation to hard-wire their rotation.  Make sure to add heat shrink around each solder joint.
+
+* 2 motors straight wired, 2 motors with 2 wires swapped.  This supports the motor orientation to hard-wire their rotation.  Make sure to add heat shrink around each solder joint.
 
 image::resources/PhysicalBuild/ESCdiagram.png[]
 image::resources/PhysicalBuild/ESCtoMotor.png[]
 Extend power wires from ESCs
-• Add heat shrink around each solder joint
+
+* Add heat shrink around each solder joint
 
 image::resources/PhysicalBuild/ESCpower.png[]
 
 Attach Motor to motor mounts
-• Make sure to attach metal brackets prior to attaching motors
-• Loctite motor bolts and arm bracket bolds
+
+* Make sure to attach metal brackets prior to attaching motors
+* Loctite motor bolts and arm bracket bolds
 
 Slide the plastic onto the bolt
 
@@ -48,35 +51,38 @@ image::resources/PhysicalBuild/Arms/4xMotorMounts.jpg[]
 
 image::resources/PhysicalBuild/motormount2.png[]
 
+NOTE: Wear respiration PPE when cutting or drilling carbon fiber.
+
 Cut arm to 18 inches:
 
-`@TODO image of cut arms`
-
-Attach arms to hinges
-Hinges need to be removed from the original tarot arms (by force - one ughaduga should do). The hinges are attached to the tarot arms by a bolt and glue.  Start by removing the bolt and then separating the hinge from the arm using a small wedge and a hammer:
-
-image::resources/PhysicalBuild/armHindge1.png[]
-image::resources/PhysicalBuild/armHindge2.png[]
-image::resources/PhysicalBuild/armHindge3.png[]
+image::resources/PhysicalBuild/armCut.jpg[]
 
 Drill a hole to attach the hinge to arm.  This hole should align with the hinge mounting holes -  to align in, you can put the hinge in place and mark a drill point.
 
 image::resources/PhysicalBuild/armDrill.png[]
 
-And attach the hinge to arm using the long bolt
+Prepare the arm hinge 3D print by adding the brass inserts. Note the shorter brass insert is used to secure the long bolt through the arm, all the other brass inserts are the longer inserts.
 
-image::resources/PhysicalBuild/armBolt.png[]
+image::resources/PhysicalBuild/armHingeBrassInsert1.jpg[]
+image::resources/PhysicalBuild/armHingeBrassInsert2.jpg[]
+
+Remove the bolt from the kit arms:
+
+image::resources/PhysicalBuild/armHingeBoltRemove.jpg[]
+
+Attach the prepared arm hinge using the long bolt to the end of the arm:
+
+image::resources/PhysicalBuild/armHingeBolt.jpg[]
 
 
 Attach mounted motors to end of arms
 
 image::resources/PhysicalBuild/armAttach.png[]
 
-Hot glue ESCs to ESC mounts and glue to bottom of arm, zip tie to arm
 
-`@TODO image of ziptied arms`
+Zip tie ESCs to the bottom of the arm and the wires against the arms:
 
-Zip tie all lines into place
+image::resources/PhysicalBuild/armZipTie.jpg[]
 
 Result
 4x of these, 2 with swapped ESC / Motor wires:
@@ -96,17 +102,25 @@ image::resources/PhysicalBuild/Legs/legSetScrew2.jpg[]
 image::resources/PhysicalBuild/Legs/legSetScrewLower.jpg[]
 
 Mount Legs
+
 Unscrew leg brackets and attach them to the body
 
-image::resources/PhysicalBuild/legMount.png[]
-image::resources/PhysicalBuild/legMount2.png[]
+image::resources/PhysicalBuild/legBracket1.jpg[]
 
 Reattach legs to brackets and connect set screw
 
-image::resources/PhysicalBuild/legReattach.png[]
+image::resources/PhysicalBuild/legBracket2.jpg[]
+image::resources/PhysicalBuild/legReattach1.jpg[]
 image::resources/PhysicalBuild/legReattach2.png[]
+
 Mount Arms
-Replace stock tarot frame arm locks with larger 3D printed arm locks.
+
+Prepare 3D printed arm clasps by inserting long brass inserts into mounting holes:
+
+image::resources/PhysicalBuild/armClaspBrassInsert.jpg[]
+
+
+* Replace stock tarot frame arm locks with larger 3D printed arm clasps.
 
 image::resources/PhysicalBuild/armMount.png[]
 Attach built arms to attachment points in the body frame.
