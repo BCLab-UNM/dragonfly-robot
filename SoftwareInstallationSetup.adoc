@@ -12,10 +12,7 @@ Click "WRITE" enter your password if it promts you.
 
 Profit
 
-After writing is compleate, boot the pi up and change the password(will prompt you to do it on login),
-
-Once the system is back up verify it has network connectivity 
-`ping 8.8.8.8`
+After writing is compleate, mount it and edit its /etc/hostname & /etc/hosts files
 
 === @NOTE where it is `#` please put the appropriate number
 == Edit `/etc/hostname`
@@ -26,62 +23,30 @@ edit to just
 just below localhost paste
 `127.0.1.1 dragonfly#`
 
-
-if you miss the cloud init printout with the ip address you can install ifconfig
-`sudo apt install net-tools`
-Then run `ifconfig` and look at the inet under eth0, wlan0 and/or wlan1
-@note you can also logout and back-in and it is part of the banner
+== Boot the pi up and change the password(will prompt you to do it on login),
 
 = On the laptop/desktop
 
 == Install ansible
 
-== edit the  `/etc/ansible/hosts` file at the bottom add
-
-[source]
-----
-[dragonflys]
-ip_of_dragonfly1
-ip_of_dragonfly2
-ip_of_dragonfly3
-ip_of_dragonfly4
-ect
-----
-
 == Copy over your public ssh key
 from the laptops `.ssh/id_rsa.pub`
 insert into `.ssh/authorized_keys`
 or just run `ssh-copy-id ubuntu@dragonfly's_ip`
+or just run `ssh-copy-id ubuntu@dragonfly#.local`
 
 @Note `dragonfly#.local` might resolve
 
 == Run the playbook from the dragonfly-controller/scripts directory
-`ansible-playbook playbook.yaml -u ubuntu`
+`ansible-playbook playbook.yaml -u ubuntu --inventory ./inventory`
 
 @Note if you are getting this error below it is probably because unattended upgrades are in progress, so just wait a few minutes and run it again.
 
 [source]
 ----
-fatal: [64.106.39.115]: FAILED! => {"changed": false, "msg": "'/usr/bin/apt-get upgrade --with-new-pkgs ' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 2551 (unattended-upgr)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stdout": "", "stdout_lines": []}
+fatal: [dragonfly#.local]: FAILED! => {"changed": false, "msg": "'/usr/bin/apt-get upgrade --with-new-pkgs ' failed: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 2551 (unattended-upgr)\nE: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?\n", "rc": 100, "stdout": "", "stdout_lines": []}
 
 ----
-
-
-== Edit `/etc/netplan/20-adhoc.yaml`
-on the addresses line change the 1 to match the Dragonfly's number
-
-[source,yaml]
-----
-addresses: [10.42.0.1/24]
-----
-Then apply it and reboot
-
-[source,bash]
-----
-sudo netplan apply
-sudo reboot
-----
-
 
 = Install Mission Planner on Windows
 https://ardupilot.org/planner/docs/mission-planner-installation.html
