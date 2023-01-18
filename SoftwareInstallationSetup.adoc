@@ -5,8 +5,13 @@ Ubuntu: https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb
 
 Windows: https://downloads.raspberrypi.org/imager/imager_latest.exe
 
+== Download the image
+https://cdimage.ubuntu.com/releases/22.04.1/release/ubuntu-22.04.1-preinstalled-desktop-arm64+raspi.img.xz
+or #@TODO test drivers and boot time between them
+https://cdimage.ubuntu.com/releases/22.04.1/release/ubuntu-22.04.1-preinstalled-server-arm64+raspi.img.xz
+
 === Run the Raspberry Pi Imager
-Then click "CHOOSE OS" under Operating System then "use custom" then select the `ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz`
+Then click "CHOOSE OS" under Operating System then "use custom" then select the `ubuntu-22.04.1-preinstalled-desktop-arm64+raspi.img.xz`
 Then click "CHOOSE STORAGE" under Storage and then "Internal SD card reader"
 Click "WRITE" enter your password if it promts you.
 
